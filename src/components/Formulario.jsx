@@ -1,5 +1,6 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react"; //shortcut "rafcp" react+propTypes
 import { v4 as uuid } from "uuid";
+import PropTypes from "prop-types"; //shortcut "impt"
 
 const Formulario = ({ crearCita }) => {
   const [cita, setcita] = useState({
@@ -112,6 +113,10 @@ const Formulario = ({ crearCita }) => {
       </form>
     </Fragment>
   );
+};
+
+Formulario.propTypes = {
+  crearCita: PropTypes.func.isRequired, //ptfr
 };
 
 export default Formulario;

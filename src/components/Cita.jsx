@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"; //shortcut "rafcp" react+propTypes
+import PropTypes from "prop-types"; //shortcut "impt"
 
 const Cita = ({ cita, eliminarCita }) => (
   <div className="cita">
@@ -20,11 +21,16 @@ const Cita = ({ cita, eliminarCita }) => (
 
     <button
       className="button eliminar u-full-width"
-      onClick={() => eliminarCita(cita.id)} //NO sé si hay que hacer así en todos los onClick 
+      onClick={() => eliminarCita(cita.id)} //NO sé si hay que hacer así en todos los onClick
     >
       Eliminar cita
     </button>
   </div>
 );
+
+Cita.propTypes = {
+  cita: PropTypes.object.isRequired, //ptor
+  eliminarCita: PropTypes.func.isRequired, //ptfr
+};
 
 export default Cita;

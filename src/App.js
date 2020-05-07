@@ -33,7 +33,7 @@ function App() {
     const citasMenosUna = citas.filter((cita) => cita.id !== id); //retorna citas que cumplen la condición
     setcitas(citasMenosUna);
   };
-
+  
   const tituloCondicional =
     citas.length === 0 ? "Crea tu primera cita" : "Administra tus citas";
 
