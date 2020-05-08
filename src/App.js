@@ -10,10 +10,7 @@ function App() {
     citasIniciales = [];
   }
   const [citas, setcitas] = useState(citasIniciales);
-  console.log('CUANTAS VECES EJECUTA ESTO?');
-  
-  
-  
+  console.log('CUANTAS VECES EJECUTA ESTO?');  
   
   //useEffect: para realizar operaciones cuando cambia un State
   //similar a componentDidMount y componentDidUpdateMount en una misma función
@@ -22,7 +19,7 @@ function App() {
   }, [citas]); //agrego la dependencia sobre citas, es decir, que haga esto  
   //unicamente cuando citas cambie de estado.
   //Si no agrego una dependencia creo que se queda en un ciclo infinito
-
+ 
   //state del arreglo de todas las citas
 
   const crearCita = (cita) => {
